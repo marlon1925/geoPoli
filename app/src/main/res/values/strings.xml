@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Geo Poli</string>
+    <string name="app_nombre_ok">Geo Poli</string>
+    <string name="txt_correo">Email</string>
+    <string name="txt_password">Contraseña</string>
+    <string name="txt_button_login">Iniciar Sesión</string>
+    <string name="txt_header_log">Inicio de sesión</string>
+    <string name="txt_ir_register">¿No tienes cuenta? Registrate aquí</string>
+    <string name="txt_registro">Registro de usuario</string>
+    <string name="title_activity_tabs">TabsActivity</string>
+    <string name="tab_text_1">Información personal</string>
+    <string name="tab_text_2">Ultimos registros de ubicación</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Fragmento other</string>
+    <string name="fragmento_location">Fragemento de localizacion</string>
+    <string name="titulo_tabs_general">Sistema de geolocalización</string>
+    <!-- Registro -->
+    <string name="txt_nombre">Nombre</string>
+    <string name="txt_username">Username</string>
+    <string name="txt_btRegistrarse">Registrarme</string>
+    <string name="modulo_registro">Registrarse en el sistema</string>
+    <string name="modulo_inicio">Ingresa al sistema</string>
+
+</resources>
