@@ -92,9 +92,12 @@ public class ServicioMaps extends Service {
                 @Override
                 public void onSuccess(Location location) {
                     if (location != null) {
-                        LocationUser lu = new LocationUser(Params.UserFirebaseId,
-                                Double.toString(location.getLatitude()), Double.toString(location.getLongitude()),
-                                LocalDateTime.now().toString());
+                        LocationUser lu = null;
+                        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+                            lu = new LocationUser(Params.UserFirebaseId,
+                                    Double.toString(location.getLatitude()), Double.toString(location.getLongitude()),
+                                    LocalDateTime.now().toString());
+                        }
                         Toast.makeText(getApplicationContext(),
                                 "location" + location.getLatitude() + ":" + location.getLongitude(), Toast.LENGTH_SHORT)
                                 .show();
@@ -115,7 +118,7 @@ public class ServicioMaps extends Service {
 
     public void saveLocationUser(LocationUser locationUser) {
         DatabaseReference myRef = database.getReference("locations/" + Params.UserFirebaseId);
-        myRef.push().setValue(locationUser);
+        myRef.setValue(locationUser);
         // databaseReference.child("locations").child().setValue(locationUser);
 
     }

@@ -11,20 +11,30 @@
     android:background="@drawable/background"
     tools:context=".LoginScreen">
 
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Geolocalización de Minería"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:padding="10dp" />
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
-        android:background="@drawable/custom_edittest"
-        app:cardBackgroundColor="@color/black"
+        app:cardBackgroundColor="#707070"
         app:cardCornerRadius="30dp"
         app:cardElevation="40dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="429dp"
+            android:layout_height="464dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
+            android:background="#707070"
             android:orientation="vertical"
             android:padding="24dp">
 
@@ -88,7 +98,7 @@
                 android:id="@+id/passwordReset"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="¿Olvidaste la contraseña? Recuperala aquí" />
+                android:text="¿Olvidaste la contraseña? Recupérala aquí" />
 
             <Space
                 android:layout_width="match_parent"
@@ -104,20 +114,12 @@
                 tools:layout_editor_absoluteX="105dp"
                 tools:layout_editor_absoluteY="644dp" />
 
-            <!--            <LinearLayout-->
-            <!--                android:id="@+id/linearLayout"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="match_parent"-->
-            <!--                android:gravity="center"-->
-            <!--                android:orientation="vertical">-->
-
-            <!--            </LinearLayout>-->
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="150dp" />
-
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
 </LinearLayout>

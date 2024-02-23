@@ -101,6 +101,7 @@ public class UsersScreen extends AppCompatActivity {
                 isTouched = true;
             }
         });
+
         timer = new Timer();
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -207,63 +208,74 @@ public class UsersScreen extends AppCompatActivity {
     }
 
     public void getUsersAllLocations() {
+        // Crear un usuario ciclista para el usuario principal con una lista vacía de ubicaciones
+        UserCiclista userPrincipal = new UserCiclista(userMainApp, new ArrayList<LocationUser>());
 
-        UserCiclista uc = new UserCiclista(userMainApp, new ArrayList<LocationUser>());
+        // Agregar el usuario principal a la lista de todos los usuarios
         listAllUsersComplete = listUsers;
-        listAllUsersComplete.add(uc);
+        listAllUsersComplete.add(userPrincipal);
+        System.out.println("MINEROS; "+ userMainApp);
+        // Establecer el ID del usuario principal en Params
         Params.userId = userMainApp.getId();
-        getLocationsByUser();
 
+        // Obtener las ubicaciones por usuario
+        getLocationsByUser();
     }
 
+
     public void getLocationsByUser() {
+        System.out.println("ENTRAAAAAAAAAAAAAA");
         database = FirebaseDatabase.getInstance();
-        myRef = database.getReference("locations");
+        myRef = database.getReference("locations").child(Params.UserFirebaseId);
         loadingCustomer.sartLoading();
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
-
                     for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
-                        if (postSnapshot.exists()) {
-                            String idUser = "";
-                            ArrayList<LocationUser> locationsUser = new ArrayList<LocationUser>();
-                            for (DataSnapshot postSnapshot1 : postSnapshot.getChildren()) {
-                                LocationUser locationUser = postSnapshot1.getValue(LocationUser.class);
-                                idUser = locationUser.getId();
-                                locationsUser.add(locationUser);
-                            }
+                        String id = postSnapshot.child("id").getValue(String.class);
+                        String latitude = postSnapshot.child("latitude").getValue(String.class);
+                        String longitud = postSnapshot.child("longitud").getValue(String.class);
+                        String date = postSnapshot.child("date").getValue(String.class);
 
-                            if (idUser.length() > 0) {
-                                int counter = 0;
-                                int index = -1;
-                                for (UserCiclista userCil : listAllUsersComplete) {
-                                    if (userCil.getCiclista().getId().equals(idUser)) {
-                                        index = counter;
-                                        break;
-                                    }
-                                    counter++;
-                                }
-                                if (index != -1) {
-                                    listAllUsersComplete.get(index).setLastLocations(locationsUser);
-                                }
+                        LocationUser locationUser = new LocationUser(id, latitude, longitud, date);
+
+                        int counter = 0;
+                        int index = -1;
+                        for (UserCiclista userCil : listAllUsersComplete) {
+                            if (userCil.getCiclista().getId().equals(id)) {
+                                index = counter;
+                                break;
                             }
+                            counter++;
+                        }
+                        if (index != -1) {
+                            ArrayList<LocationUser> locationsUser = new ArrayList<>();
+                            locationsUser.add(locationUser);
+                            listAllUsersComplete.get(index).setLastLocations(locationsUser);
                         }
                     }
                     Params.userCiclistasAll = listAllUsersComplete;
-                    // changePageMapsAllUsers();
                     changePageMapsAllUsers();
                 }
                 loadingCustomer.endLoading();
-
-            };
+            }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                // Manejar errores de cancelación
             }
         });
+    }
+
+    // Método auxiliar para encontrar un usuario por su ID en la lista de todos los usuarios
+    private UserCiclista findUserById(String userId) {
+        for (UserCiclista userCiclista : listAllUsersComplete) {
+            if (userCiclista.getCiclista().getId().equals(userId)) {
+                return userCiclista;
+            }
+        }
+        return null;
     }
 
     public void changePageMapsAllUsers() {

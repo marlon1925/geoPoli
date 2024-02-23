@@ -8,6 +8,7 @@ public class LocationUser {
     private String longitud;
     private String date;
 
+
     public LocationUser( ) {
     }
 
