@@ -17,7 +17,7 @@ public class AdaptadorDatos  extends RecyclerView.Adapter<AdaptadorDatos.ViewHol
     private ArrayList<UserCiclista> datos;
     private Context myCotext;
 
-    public AdaptadorDatos(ArrayList<UserCiclista> datos,Context myCotext) {
+    public AdaptadorDatos(ArrayList<UserCiclista> datos, Context myCotext) {
         this.datos = datos;
         this.myCotext=myCotext;
     }

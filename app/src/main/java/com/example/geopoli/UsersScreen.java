@@ -198,7 +198,7 @@ public class UsersScreen extends AppCompatActivity {
                                 Double.toString(location.getLongitude()), LocalDateTime.now().toString());
                     }
                     Toast.makeText(getApplicationContext(),
-                            "location" + location.getLatitude() + ":" + location.getLongitude(), Toast.LENGTH_SHORT)
+                                    "location" + location.getLatitude() + ":" + location.getLongitude(), Toast.LENGTH_SHORT)
                             .show();
                     // saveLocationUser(lu);
                 }
