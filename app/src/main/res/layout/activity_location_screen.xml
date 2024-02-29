@@ -53,6 +53,18 @@
         map:layout_constraintVertical_bias="0.975" />
 
     <Button
+        android:id="@+id/historial"
+        android:layout_width="153dp"
+        android:layout_height="49dp"
+        android:text="Historial"
+        map:layout_constraintBottom_toBottomOf="@+id/map"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintHorizontal_bias="1.0"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="parent"
+        map:layout_constraintVertical_bias="0.058" />
+
+    <Button
         android:id="@+id/addMarkerBtn"
         android:layout_width="187dp"
         android:layout_height="55dp"

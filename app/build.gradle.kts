@@ -5,14 +5,14 @@ plugins {
 }
 
 android {
-    namespace = "com.example.geopoli"
+    namespace = "com.poli2024.geopoli"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.geopoli"
+        applicationId = "com.poli2024.geopoli"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
+        versionCode = 2
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"

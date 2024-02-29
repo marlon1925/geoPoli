@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.geopoli">
+    package="com.poli2024.geopoli">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -20,33 +20,36 @@
         tools:targetApi="31">
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCbCXwS4nzy0SGnZKngXY79lWPwAQYDy3I" />
+            android:value="INGRESA TUS CREDENCIALES DE GOOGLE API" />
         <activity
-            android:name=".MapsScreen"
+            android:name="com.poli2024.geopoli.MapsScreen"
             android:exported="false" />
         <activity
-            android:name=".ResetPasword"
+            android:name="com.poli2024.geopoli.ResetPasword"
             android:exported="false" />
 
 
         <service
-            android:name=".ServicioMaps"
+            android:name="com.poli2024.geopoli.ServicioMaps"
             android:exported="false" />
 
         <activity
-            android:name=".LocationScreen"
+            android:name="com.poli2024.geopoli.LocationScreen"
             android:exported="false" />
         <activity
-            android:name=".RegisterActivity"
+            android:name="com.poli2024.geopoli.RegisterUser"
             android:exported="false" />
         <activity
-            android:name=".LoginScreen"
+            android:name="com.poli2024.geopoli.LoginScreen"
             android:exported="false" />
         <activity
-            android:name=".UsersScreen"
+            android:name="com.poli2024.geopoli.UsersScreen"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.poli2024.geopoli.TerrenosHistorial"
+            android:exported="false" />
+        <activity
+            android:name="com.poli2024.geopoli.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

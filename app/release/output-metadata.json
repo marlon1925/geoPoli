@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.example.geopoli",
+  "applicationId": "com.poli2024.geopoli",
   "variantName": "release",
   "elements": [
     {

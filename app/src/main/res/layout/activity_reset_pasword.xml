@@ -25,15 +25,15 @@
             android:orientation="vertical"
             android:gravity="center"
             >
+
             <TextView
                 android:id="@+id/txtHeaderLog"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="20dp"
                 android:text="Recuperar Contraseña"
-                android:textColor="#000000"
-                android:textSize="25sp"
-                />
+                android:textColor="#FFFFFF"
+                android:textSize="25sp" />
 
 
             <EditText
@@ -48,9 +48,8 @@
                 android:hint="@string/txt_correo"
                 android:inputType="textEmailAddress"
                 android:padding="8dp"
-                android:textColor="@color/black"
-                android:textColorHighlight="@color/cardview_dark_background"
-                />
+                android:textColor="@color/white"
+                android:textColorHighlight="@color/cardview_dark_background" />
 
 
 
