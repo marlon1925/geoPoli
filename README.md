@@ -38,33 +38,33 @@ El presente proyecto tiene como objetivo evaluar el desarrollo de aplicaciones m
     > - Adicinal a esto deberá dar permisos de ubicación de la aplicación.
         Para otorgar estos permisos deberá acceder a los detalles de la aplicación tal como se indica en la figura.
         
-IMG
-    > - Después procederá a establecer los permisos de ubicación
-    
-IMG
-    > - Una vez establecido los permisos correspondientes la aplicación funcionará sin ningún problema.
 
 ## SITIO WEB
 Acontinuación se presenta el sitio web, con la información que tiene el aplicativo móvil.
 #### LOGIN
-IMG
+![image](https://github.com/marlon1925/geoPoli/assets/117754219/72e59278-55f8-4f9f-b515-f776d77930fa)
+
 
 #### REGISTER
-IMG
+![image](https://github.com/marlon1925/geoPoli/assets/117754219/59c527fe-5110-495d-90d9-f78348b211c2)
+
 #### DASHBOARD
-IMG
+![image](https://github.com/marlon1925/geoPoli/assets/117754219/3050f4e6-da5c-41de-b3ba-12166966c77a)
+
 #### UBICACIONES 
-IMG
+![image](https://github.com/marlon1925/geoPoli/assets/117754219/682c031a-942f-4df4-ae83-4bc477e570d0)
+
 
 #### MAPA
-IMG
+
+![image](https://github.com/marlon1925/geoPoli/assets/117754219/a7caf499-5147-4d81-9da1-b080c4ff302e)
 
 
 # VIDEOS
 - Video explicativo: https://youtu.be/F4JUYCzaYTs
 
 # ENLACES
-- Página Web: ENLACE
+- Página Web: https://geo-poli.vercel.app/
 - APK: https://epnecuador-my.sharepoint.com/:f:/g/personal/josue_salazar_epn_edu_ec/EnZvxd80YAlCjVp5tyM2_2MBp1xeBUBNMMkbFMmXq05CFw?e=NctWYA
 - Aplicación en Aptoide: https://geo-poli.es.aptoide.com/?store_name=marlon1925&app_id=67185014
 
