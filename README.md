@@ -5,8 +5,7 @@
 - Marlon Lalangui
 - Josue Salazar
 ## PROYECTO
-El proyecto consiste en un aplicativo móvil, el cual esta enfocado a arquitectos. El proyecto tiene como finalidad calcular las areas, perimetros, etc de distintas edificaciones o espacios en tiempo real. 
-de su equipo.
+El presente proyecto tiene como objetivo evaluar el desarrollo de aplicaciones móviles híbridas/nativas con servicios en segundo plano.
 
 ![image](https://github.com/marlon1925/geoPoli/assets/117754219/9d6c8d50-a912-49c6-8a35-d400305128b5)
 
@@ -20,7 +19,7 @@ de su equipo.
     
 
 #### PANTALLA PRINCIPAL
-- Una vez registrado ingresa a la aplicación, para lo cual se tiene un dashboard en donde se meustra los datos del usuario que ingreso y el resto de usuarios que esten en la aplicación, a demas de 3 botones que son para capturar la ubicación, detener ubicación y cerrar sesión
+- Una vez que te hayas registrado, podrás ingresar a la aplicación. En ella, encontrarás un panel de control que muestra los datos del usuario que ha iniciado sesión, así como la información de los demás usuarios que están utilizando la aplicación. Además, el panel de control cuenta con tres botones principales: uno para capturar la ubicación, otro para detener la captura de la ubicación y un último botón para cerrar la sesión..
 
 IMG
 - Al momento de dar clic en el botón "Capturar Ubicación", solicitara los permisos necesarios para poder utilizar la ubicación del dispositivo
