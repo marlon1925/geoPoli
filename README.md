@@ -5,7 +5,7 @@
 - Marlon Lalangui
 - Josue Salazar
 ## PROYECTO
-El proyecto consiste en un aplicativo móvil, el cual esta enfocado a ciclistas. El proyecto tiene como finalidad saber la geolocalización del ciclista y de los demás integrantes del equipo. 
+El proyecto consiste en un aplicativo móvil, el cual esta enfocado a arquitectos. El proyecto tiene como finalidad calcular las areas, perimetros, etc de distintas edificaciones o espacios en tiempo real. 
 de su equipo.
 
 ![image](https://github.com/marlon1925/geoPoli/assets/117754219/9d6c8d50-a912-49c6-8a35-d400305128b5)
@@ -13,27 +13,24 @@ de su equipo.
 
 ### COMPONENTES DEL APLICATIVO MÓVIL
 #### REGISTRO
-- El proyecto contiene un registro el cual debe ingresar su correo electrónico, contraseña, nombre completo, nombre del equipo, su teléfono celular y su edad
+- El proyecto contiene un registro el cual debe ingresar su correo electrónico, contraseña, nombre completo.
 
     ![image](https://github.com/marlon1925/geoPoli/assets/117754219/1b582fcb-57ef-4abc-9859-c6f14490497b)
 
     
 
 #### PANTALLA PRINCIPAL
-- Una vez, haya activado su correo electrónico le permitirá ingresar al aplicativo, para lo cual se tiene un dashboard en donde se meustra una tarjeta con 
-la latitud y longitud actual de donde se encuentra el usuario. Además de incluir botones como "Mostrar Mapa", "Integrantes del Equipo" y "Cerrar Sesión"
+- Una vez registrado ingresa a la aplicación, para lo cual se tiene un dashboard en donde se meustra los datos del usuario que ingreso y el resto de usuarios que esten en la aplicación, a demas de 3 botones que son para capturar la ubicación, detener ubicación y cerrar sesión
 
 IMG
-- Al momento de dar clic en el botón "Mostrar Mapa", le mostrará su ubicación actual dentro de google maps
+- Al momento de dar clic en el botón "Capturar Ubicación", solicitara los permisos necesarios para poder utilizar la ubicación del dispositivo
 
 IMG
 
-- Además de esto al dar clic en ver Integrantes del Equipo, le mostrará una lista con los nombres de los corredores registrados y sus respectivos equipos
-además de su número telefónico.
+- Una vez dado los permisos podemos ver en la opcion de medir terreno como se nos desplega el mapa para poder ver donde nos encontramos
 
 IMG
-      > Dentro de la interfaz de los ciclistas, al seleccionar en un ciclista le mostrará las ubicaciones en las que ha 
-        estado cualquier ciclista. Además de proveer información como la fecha y hora en la que estuvo en esa posición
+    
     
 IMG
 
@@ -58,7 +55,7 @@ IMG
 IMG
 #### DASHBOARD
 IMG
-#### UBICACIONES DE LOS CICLISTAS
+#### UBICACIONES 
 IMG
 
 #### MAPA
