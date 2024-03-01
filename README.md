@@ -63,8 +63,7 @@ IMG
 
 
 # VIDEOS
-- Manual de Usuario: VIDEO
-- Manual Técnico: VIDEO
+- Video explicativo: https://youtu.be/F4JUYCzaYTs
 
 # ENLACES
 - Página Web: ENLACE
