@@ -30,7 +30,7 @@ El presente proyecto tiene como objetivo evaluar el desarrollo de aplicaciones m
 
 - Una vez dado los permisos podemos ver en la opcion de medir terreno como se nos desplega el mapa para poder ver donde nos encontramos
 
-        ![Imagen de WhatsApp 2024-02-29 a las 23 53 22_dc7fbf6f](https://github.com/marlon1925/geoPoli/assets/117753844/21ab5a34-bdf9-4636-895a-b9a659f7d5da)
+  ![Imagen de WhatsApp 2024-02-29 a las 23 53 22_633253e3](https://github.com/marlon1925/geoPoli/assets/117753844/c17f64d4-d1f1-4a09-9787-49857124d187)
 
 ### RECOMENDACIONES
     > - La aplicación no mostrará s posición actual si no activa y da permisos de ubicación. 
