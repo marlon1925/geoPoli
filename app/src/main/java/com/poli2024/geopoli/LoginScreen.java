@@ -72,9 +72,5 @@ public class LoginScreen extends AppCompatActivity {
         Intent iniciar = new Intent(this, UsersScreen.class);
         startActivity(iniciar);
     }
-    //redirigir al registro
-    public void IrRegistro(View view){
-        Intent irRegistro = new Intent(this, RegisterUser.class);
-        startActivity(irRegistro);
-    }
+
 }

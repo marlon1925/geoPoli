@@ -31,7 +31,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="464dp"
+            android:layout_height="327dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:background="#707070"
@@ -103,16 +103,6 @@
             <Space
                 android:layout_width="match_parent"
                 android:layout_height="24dp" />
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="IrRegistro"
-                android:text="@string/txt_ir_register"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="105dp"
-                tools:layout_editor_absoluteY="644dp" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

@@ -22,6 +22,7 @@ import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -62,6 +63,7 @@ public class UsersScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_users_screen);
+        checkUserActivation();
 
         Params.activityService = UsersScreen.this;
         Params.contextService = UsersScreen.this;
@@ -130,7 +132,46 @@ public class UsersScreen extends AppCompatActivity {
         // startTimer();
 
     }
+    private void checkUserActivation() {
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
 
+        if (currentUser != null) {
+            DatabaseReference usersRef = FirebaseDatabase.getInstance().getReference("users")
+                    .child(currentUser.getUid());
+
+            usersRef.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.exists()) {
+                        Boolean isActive = dataSnapshot.child("isActive").getValue(Boolean.class);
+                        if (isActive != null && isActive) {
+                            // Si el usuario está activo, carga los datos del usuario
+                            getUsersDataBase();
+                        } else {
+                            // Si el usuario está desactivado, cierra la sesión y muestra un mensaje
+                            FirebaseAuth.getInstance().signOut();
+                            showToast("Usuario desactivado");
+                            navigateToLoginScreen();
+                        }
+                    } else {
+                        // Si el usuario no existe, muestra un mensaje y redirige al usuario a la pantalla de inicio de sesión
+                        FirebaseAuth.getInstance().signOut();
+                        showToast("Usuario eliminado");
+                        navigateToLoginScreen();
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+                    // Manejar errores de base de datos
+                }
+            });
+        } else {
+            // Si no hay usuario actual, redirige al usuario a la pantalla de inicio de sesión
+            navigateToLoginScreen();
+        }
+    }
     public void has() {
         Intent iniciar = new Intent(this, LocationScreen.class);
         startActivity(iniciar);
@@ -219,29 +260,14 @@ public class UsersScreen extends AppCompatActivity {
         });
     }
 
-    public void getLastLocation() {
-
-        if (ContextCompat.checkSelfPermission(UsersScreen.this,
-                Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
-            ubication = LocationServices.getFusedLocationProviderClient(UsersScreen.this);
-            ubication.getLastLocation().addOnSuccessListener(UsersScreen.this, new OnSuccessListener<Location>() {
-                @Override
-                public void onSuccess(Location location) {
-                    System.out.println("location +" + location);
-                    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-                        LocationUser lu = new LocationUser("s", Double.toString(location.getLatitude()),
-                                Double.toString(location.getLongitude()), LocalDateTime.now().toString());
-                    }
-                    Toast.makeText(getApplicationContext(),
-                                    "location" + location.getLatitude() + ":" + location.getLongitude(), Toast.LENGTH_SHORT)
-                            .show();
-                    // saveLocationUser(lu);
-                }
-            });
-        }
-
+    private void navigateToLoginScreen() {
+        Intent intent = new Intent(UsersScreen.this, LoginScreen.class);
+        startActivity(intent);
+        finish();
     }
-
+    private void showToast(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+    }
     public void getUsersAllLocations() {
         // Crear un usuario ciclista para el usuario principal con una lista vacía de ubicaciones
         Users userPrincipal = new Users(userMainApp, new ArrayList<LocationUser>());
