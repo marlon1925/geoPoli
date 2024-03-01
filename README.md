@@ -19,19 +19,18 @@ El presente proyecto tiene como objetivo evaluar el desarrollo de aplicaciones m
     
 
 #### PANTALLA PRINCIPAL
-- Una vez que te hayas registrado, podrás ingresar a la aplicación. En ella, encontrarás un panel de control que muestra los datos del usuario que ha iniciado sesión, así como la información de los demás usuarios que están utilizando la aplicación. Además, el panel de control cuenta con tres botones principales: uno para capturar la ubicación, otro para detener la captura de la ubicación y un último botón para cerrar la sesión..
+- Una vez que te hayas registrado, podrás ingresar a la aplicación. En ella, encontrarás un panel de control que muestra los datos del usuario que ha iniciado sesión, así como la información de los demás usuarios que están utilizando la aplicación. Además, el panel de control cuenta con tres botones principales: uno para capturar la ubicación, otro para detener la captura de la ubicación y un último botón para cerrar la sesión.
+  
+    ![Imagen de WhatsApp 2024-02-29 a las 23 53 21_a6ae7ea4](https://github.com/marlon1925/geoPoli/assets/117753844/342ddf34-e3cf-494a-8898-35f0d2844138)
 
-IMG
 - Al momento de dar clic en el botón "Capturar Ubicación", solicitara los permisos necesarios para poder utilizar la ubicación del dispositivo
 
-IMG
+    ![Imagen de WhatsApp 2024-02-29 a las 23 53 22_25b35134](https://github.com/marlon1925/geoPoli/assets/117753844/a700ecf4-6d67-40c6-bba5-48ec11356702)
+
 
 - Una vez dado los permisos podemos ver en la opcion de medir terreno como se nos desplega el mapa para poder ver donde nos encontramos
 
-IMG
-    
-    
-IMG
+        ![Imagen de WhatsApp 2024-02-29 a las 23 53 22_dc7fbf6f](https://github.com/marlon1925/geoPoli/assets/117753844/21ab5a34-bdf9-4636-895a-b9a659f7d5da)
 
 ### RECOMENDACIONES
     > - La aplicación no mostrará s posición actual si no activa y da permisos de ubicación. 
