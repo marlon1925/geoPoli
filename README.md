@@ -38,11 +38,6 @@ El presente proyecto tiene como objetivo evaluar el desarrollo de aplicaciones m
     > - Adicinal a esto deberá dar permisos de ubicación de la aplicación.
         Para otorgar estos permisos deberá acceder a los detalles de la aplicación tal como se indica en la figura.
         
-IMG
-    > - Después procederá a establecer los permisos de ubicación
-    
-IMG
-    > - Una vez establecido los permisos correspondientes la aplicación funcionará sin ningún problema.
 
 ## SITIO WEB
 Acontinuación se presenta el sitio web, con la información que tiene el aplicativo móvil.
